@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../../../src/images/amazonLogo.png'
 import { FaSearch } from "react-icons/fa";
 import { CiShoppingCart } from "react-icons/ci";
 import classes from './Header.module.css'
 import { Link } from 'react-router-dom';
+import { DataContext } from '../DataProvider/DataProvider';
 function Header() {
+    const [{basket},dispatch]=useContext(DataContext)
+    console.log(basket.length)
   return (
     <>
         <section>
@@ -69,7 +72,7 @@ function Header() {
  <Link  to='/cart' className={classes.cart}>
  {/* icons */}
   <CiShoppingCart/>
- <span>0</span>
+ <span>{basket.length}</span>
  </Link>
  </div>
 
