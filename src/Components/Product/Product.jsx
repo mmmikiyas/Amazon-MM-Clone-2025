@@ -3,6 +3,7 @@ import axios from 'axios'
 import ProductCard from './ProductCard'
 import classes from '../Product/Product.module.css'
 function Product() {
+
    const [products, setProducts]=useState([])
    useEffect(()=>{
  axios.get('https://fakestoreapi.com/products')
