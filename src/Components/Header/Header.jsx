@@ -5,11 +5,12 @@ import { CiShoppingCart } from "react-icons/ci";
 import classes from './Header.module.css'
 import { Link } from 'react-router-dom';
 import { DataContext } from '../DataProvider/DataProvider';
+import LowerHeader from './LowerHeader';
 function Header() {
     const [{basket},dispatch]=useContext(DataContext)
     console.log(basket.length)
   return (
-    <>
+    <section className={classes.fixed}>
         <section>
         <div className={classes.header_container}>
             {/* logo */}
@@ -76,15 +77,10 @@ function Header() {
  </Link>
  </div>
 
-
-
-
-
-
-
         </div>
     </section>
-    </>
+    <LowerHeader/>
+    </section>
   );
 };
 
