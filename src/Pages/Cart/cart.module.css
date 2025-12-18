@@ -8,6 +8,28 @@
     width: 100px !important;
 }
 
+.cart_product{
+  display: flex;
+  gap: 10px;
+}
+.btn_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btn{
+  padding: 5px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+.btn:hover svg{
+    background-color: var(--primary-color);
+}
+
 .container div:not(.subtotal){
     height: auto !important;
 }
@@ -38,7 +60,7 @@
   text-align: center;
   width: 100%;
   border: none;
-  border-color: var(--primary-color);
+  background: var(--primary-shade);
   border-radius: 5px;
   padding: 5px 10px;
   text-decoration: none;

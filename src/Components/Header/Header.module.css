@@ -8,7 +8,7 @@
   z-index: 100;
 }
 .header_container {
-  background-color: #1a1a1a;
+  background-color: #036444;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -29,6 +29,7 @@
   width: auto; /* keeps original proportions */
   padding: 0; /* remove padding */
   margin-left: 10px; /* small spacing only (optional) */
+  margin-top: 20px;
 }
 .delivery {
   display: flex;
@@ -113,7 +114,7 @@
   font-weight: bold;
   top: 0px;
   font-size: 20px;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   left: 16px;
   color: orange;
 }
@@ -125,7 +126,7 @@
   border-radius: 3px;
 }
 .lower_container {
-  background-color: #232f3e;
+  background-color: #085749;
   color: white;
 }
 .lower_container ul {

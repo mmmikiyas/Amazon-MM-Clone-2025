@@ -1,4 +1,4 @@
- /* .category{
+ .category{
     height: 350px;
     width: 350px;
     background-color: white;
@@ -9,11 +9,11 @@
     object-fit: contain;
     min-height: 250px;
     padding: 0px 10px;
-} */
+}
 
 
 
-
+/* 
 
 .category {
   width: 90%;
@@ -63,4 +63,4 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     place-items: center;
-}  
+}  */
