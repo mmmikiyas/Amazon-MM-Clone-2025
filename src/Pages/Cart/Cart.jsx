@@ -8,7 +8,7 @@ import classes from "./cart.module.css";
 const Cart = () => {
   const [{ basket, user }, dispatch] = useContext(DataContext);
   const total = basket.reduce((amount, item) => {
-    return item.price + amount;
+    return item.price * item.amount + amount
   }, 0);
 
   return (
@@ -22,22 +22,21 @@ const Cart = () => {
             <p>Opps ! No item in your cart</p>
           ) : (
             basket?.map((item, i) => {
-              return (
-                <ProductCard
+              return <ProductCard
                   key={i}
                   product={item}
                   renderDesc={true}
                   renderAdd={false}
                   flex={true}
                 />
-              );
+              
             })
           )}
         </div>
-        {basket?.lenght !== 0 && (
+        {basket?.length !== 0 && (
           <div className={classes.subtotal}>
             <div>
-              <p> Subtotal({basket?.lenght} items) </p>
+              <p> Subtotal({basket?.length} items) </p>
               <CurrentFormat amount={total} />
             </div>
             <span>
