@@ -62,5 +62,9 @@
     margin-top: -10%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    max-width: 1600px;
+    gap: 50px;
+    margin-left: auto;
+    margin-right: auto;
     place-items: center;
 }  

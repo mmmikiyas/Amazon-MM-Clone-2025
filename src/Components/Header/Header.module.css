@@ -112,11 +112,11 @@
 .cart span {
   position: absolute;
   font-weight: bold;
-  top: 0px;
-  font-size: 20px;
+  top: -5px;
+  font-size: 15px;
   /* background-color: #1a1a1a; */
-  left: 16px;
-  color: orange;
+  left: 13px;
+  color: white;
 }
 .order_container a:hover,
 .delivery:hover,

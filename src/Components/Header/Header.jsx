@@ -5,14 +5,14 @@ import { CiShoppingCart } from "react-icons/ci";
 import { BiCart } from "react-icons/bi";
 import { MdShoppingCart } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
-
+import {auth } from '../../Utility/firebase'
 import classes from './Header.module.css'
 import { Link } from 'react-router-dom';
 import { DataContext } from '../DataProvider/DataProvider';
 import LowerHeader from './LowerHeader';
 import ListItem from '@mui/material/ListItem';
 function Header() {
-    const [{basket},dispatch]=useContext(DataContext)
+    const [{user,basket},dispatch]=useContext(DataContext)
     const totalItem=basket?.reduce((amount,item)=>{
         return item.amount+amount
     },0)
@@ -46,7 +46,7 @@ function Header() {
             </select>
             <input type="text" name='' placeholder='search Product' />
             {/* icon */}
-             <FaSearch size={25}/>
+             <FaSearch size={38}/>
         </div>
         {/* right side link */}
    
@@ -66,10 +66,24 @@ function Header() {
  </select>
             </Link>
  {/* three components */}
- <Link to="">
+ <Link to={!user &&"/auth"}>
+<div>
+    { user?(
+            <>
+            
+            
+        <p>Hello {user?.email?.split("@")[0]}</p> 
+             <span onClick={()=>auth.signOut()}>Sign Out</span>
+</>
+        ):(
+            <>
+            <p>Hello,Sign In</p>
+            <p>Account & Lists</p>
+            </>
+        )
 
-        <p>Sign In</p>
-        <span>Account & Lists</span>
+    }
+</div>
    
  </Link>
  {/* orders */}
